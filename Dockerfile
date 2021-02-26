@@ -1,7 +1,9 @@
 FROM debian:buster-slim
 
 ENV DISPLAY=:99 \
-    DBUS_SESSION_BUS_ADDRESS=/dev/null
+    DBUS_SESSION_BUS_ADDRESS=/dev/null \
+    VNC_SCREEN_SIZE=1920x1080 \
+    ENV_CHROME_WINDOW_SIZE=1920,1080
 
 RUN apt-get update -qqy \
   && apt-get -qqy \
